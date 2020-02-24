@@ -707,7 +707,7 @@ ifneq ($(HARDWARE_MOTHERBOARD),)
 endif
 #CEXTRA = -Wa,-adhlns=$(<:.c=.lst)
 CXXEXTRA = -fno-use-cxa-atexit -fno-threadsafe-statics -fno-rtti
-CFLAGS := $(CDEBUG) $(CDEFS) $(CINCS) -O$(OPT) $(CEXTRA)   $(CTUNING) $(CSTANDARD)
+CFLAGS := $(CDEBUG) $(CDEFS) $(CINCS) -O$(OPT) $(CEXTRA)   $(CTUNING) $(CSTANDARD) 
 CXXFLAGS :=         $(CDEFS) $(CINCS) -O$(OPT) $(CXXEXTRA) $(CTUNING) $(CXXSTANDARD)
 ASFLAGS :=          $(CDEFS)
 #ASFLAGS = -Wa,-adhlns=$(<:.S=.lst),-gstabs
