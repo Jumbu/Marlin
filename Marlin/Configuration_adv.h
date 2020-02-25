@@ -825,7 +825,7 @@
 //#define ADAPTIVE_STEP_SMOOTHING
 
 /**
- * Custom Microstepping
+ * Custom  epping
  * Override as-needed for your setup. Up to 3 MS pins are supported.
  */
 
@@ -2039,8 +2039,8 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT      350
-    #define E0_MICROSTEPS    8
+    #define E0_CURRENT      300
+    #define E0_MICROSTEPS    2
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
   #endif
