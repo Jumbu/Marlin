@@ -844,7 +844,7 @@
 //#define MICROSTEP32 HIGH,LOW
 
 // Microstep setting (Only functional when stepper driver microstep pins are connected to MCU.
-#define MICROSTEP_MODES { 16, 16, 16, 2, 16, 16 } // [1,2,4,8,16]
+#define MICROSTEP_MODES { 16, 16, 16, 1, 16, 16 } // [1,2,4,8,16]
 
 /**
  *  @section  stepper motor current
@@ -2040,7 +2040,7 @@
 
   #if AXIS_IS_TMC(E0)
     #define E0_CURRENT      300
-    #define E0_MICROSTEPS    2
+    #define E0_MICROSTEPS    1
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
   #endif
@@ -2166,7 +2166,7 @@
    * Define you own with
    * { <off_time[1..15]>, <hysteresis_end[-3..12]>, hysteresis_start[1..8] }
    */
-  #define CHOPPER_TIMING CHOPPER_DEFAULT_12V
+  #define CHOPPER_TIMING CHOPPER_DEFAULT_24V
 
   /**
    * Monitor Trinamic drivers for error conditions,
@@ -2179,7 +2179,7 @@
    * M912 - Clear stepper driver overtemperature pre-warn condition flag.
    * M122 - Report driver parameters (Requires TMC_DEBUG)
    */
-  //#define MONITOR_DRIVER_STATUS
+  #define MONITOR_DRIVER_STATUS
 
   #if ENABLED(MONITOR_DRIVER_STATUS)
     #define CURRENT_STEP_DOWN     50  // [mA]
@@ -2264,7 +2264,7 @@
    * Enable M122 debugging command for TMC stepper drivers.
    * M122 S0/1 will enable continous reporting.
    */
-  //#define TMC_DEBUG
+  #define TMC_DEBUG
 
   /**
    * You can set your own advanced settings by filling in predefined functions.
