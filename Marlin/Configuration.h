@@ -428,8 +428,8 @@
 #define TEMP_WINDOW              1  // (°C) Temperature proximity for the "temperature reached" timer
 #define TEMP_HYSTERESIS          3  // (°C) Temperature proximity considered "close enough" to the target
 
-#define TEMP_BED_RESIDENCY_TIME 25  // (seconds) Time to wait for bed to "settle" in M190
-#define TEMP_BED_WINDOW          5   // (°C) Temperature proximity for the "temperature reached" timer
+#define TEMP_BED_RESIDENCY_TIME 30   // (seconds) Time to wait for bed to "settle" in M190
+#define TEMP_BED_WINDOW          10   // (°C) Temperature proximity for the "temperature reached" timer
 #define TEMP_BED_HYSTERESIS      10  // (°C) Temperature proximity considered "close enough" to the target
 
 // Below this temperature the heater will be switched off
@@ -729,14 +729,14 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 1396 } // BMG 432.28668995496616 Mobius 555 Ascender 698
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 1400 } // BMG 432.28668995496616 Mobius 555 Ascender 698
  
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 15, 25 } 
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 15, 40 } 
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -749,7 +749,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 2000, 2000, 100, 100 }
+#define DEFAULT_MAX_ACCELERATION      { 2000, 2000, 100, 120 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
