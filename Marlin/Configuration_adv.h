@@ -836,15 +836,20 @@
 //#define MICROSTEP16 LOW,LOW,HIGH
 //#define MICROSTEP32 HIGH,LOW,HIGH
 
+
+/**
 //#define MICROSTEP1 LOW,LOW,LOW
 #define MICROSTEP2 HIGH,LOW
 #define MICROSTEP4 LOW,HIGH
 #define MICROSTEP8 LOW,LOW
 #define MICROSTEP16 HIGH,HIGH
 //#define MICROSTEP32 HIGH,LOW
+*/
+
 
 // Microstep setting (Only functional when stepper driver microstep pins are connected to MCU.
 #define MICROSTEP_MODES { 16, 16, 16, 1, 16, 16 } // [1,2,4,8,16]
+
 
 /**
  *  @section  stepper motor current
@@ -1972,7 +1977,7 @@
 #if HAS_TRINAMIC
 
   #define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
-  #define INTERPOLATE       false  // Interpolate X/Y/Z_MICROSTEPS to 256
+  #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
   #if AXIS_IS_TMC(X)
     #define X_CURRENT       750       // (mA) RMS current. Multiply by 1.414 for peak current.
